@@ -4,8 +4,15 @@
 *.iws
 .idea/
 
-#Gradle
+# Gradle
 .gradletasknamecache
 .gradle/
 build/
 bin/
+
+# Npm build node_modules #
+api/node_modules
+client/node_modules
+
+# Checkstyle
+*.cache
