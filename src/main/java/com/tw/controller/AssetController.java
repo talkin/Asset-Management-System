@@ -1,20 +1,20 @@
 package com.tw.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.tw.domain.Asset;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.atomic.AtomicLong;
-
-@Controller
+@RestController
 @RequestMapping("/asset")
-public class AssetController {
+public class AssetController
+{
 
-    private final AtomicLong counter = new AtomicLong();
-
-    @ResponseBody
     @RequestMapping(method = RequestMethod.GET)
-    public Asset getAsset() {
-        return new Asset(counter.incrementAndGet(), "my asset");
+    public Asset getAsset()
+    {
+        return new Asset(1, "my asset");
     }
+
 }
